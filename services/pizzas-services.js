@@ -18,7 +18,7 @@ export const selectPizzaById = async(Id) => {
         const pool = await sql.connect(sqlConfig)
         const result = await pool.request()
                                     .input("Id", sql.Int, Id ?? 1)
-                                    .query("SELECT * FROM Pizzas WHERE Id = @Id")
+                                    .query("SELECT * FROM Pizzas WHERE Id = @Id")       
         return result
     } catch (error) {
         console.log(error)

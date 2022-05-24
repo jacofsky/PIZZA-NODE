@@ -1,8 +1,10 @@
+import 'dotenv/config'
+
 export const sqlConfig = {
-    user: "Pizzas",
-    password: "Pizzas",
-    server: "A-BTA-03",
-    database: "Dai-Pizzas",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_DATABASE,
     options: {
         trustServerCertificate: true,
         trustedConnection: true

@@ -26,6 +26,10 @@ export const menu = async() => {
             {
                 value: 'delete',
                 name: 'Borrar pizza por id'
+            },
+            {
+                value: 'exit',
+                name: 'Salir'
             }
 
 
