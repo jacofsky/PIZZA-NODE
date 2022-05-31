@@ -1,9 +1,10 @@
 import { menu, reqId, reqPizza } from "./inquirer/menu.js";
+import Server from "./models/Server.js";
 import { createPizza, deleteById, selectPizzaById, selectPizzas, updatePizza } from "./services/pizzas-services.js"
 
 
 
-const main = async() => {
+const mainLocal = async() => {
 
     let operation = await menu()
 
@@ -54,4 +55,13 @@ const main = async() => {
 
 }
 
+
+const main = () => {
+    const server = new Server()
+
+    server.listen()
+}
+
 main()
+
+
